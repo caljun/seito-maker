@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>政党作成.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        #comments {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        政党作成.com
+    </header>
+    <main>
+        <div class="input-group">
+            <label for="party-name">政党名:</label>
+            <input type="text" id="party-name" placeholder="政党名を入力">
+        </div>
+        <div class="input-group">
+            <label for="slogan">スローガン:</label>
+            <input type="text" id="slogan" placeholder="スローガンを入力">
+        </div>
+        <div class="input-group">
+            <label for="policies">公約:</label>
+            <textarea id="policies" rows="4" placeholder="公約を入力"></textarea>
+        </div>
+        <button onclick="addComment()">コメントを追加</button>
+        <div id="comments">
+            <h3>コメント:</h3>
+            <textarea id="comment" rows="3" placeholder="コメントを入力"></textarea>
+            <button onclick="postComment()">投稿</button>
+            <div id="comment-list"></div>
+        </div>
+    </main>
+    <footer>
+        サポート | お問い合わせ
+    </footer>
+    <script>
+        function postComment() {
+            let commentText = document.getElementById("comment").value;
+            if (commentText.trim() === "") return;
+            
+            let commentList = document.getElementById("comment-list");
+            let newComment = document.createElement("p");
+            newComment.textContent = commentText;
+            commentList.appendChild(newComment);
+            
+            document.getElementById("comment").value = "";
+        }
+    </script>
+</body>
+</html>
