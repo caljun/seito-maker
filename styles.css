@@ -1,0 +1,391 @@
+body {
+  font-family: sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.search-filter {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  padding: 0.5rem;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.filter-dropdown {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.sort-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.sort-tabs button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sort-tabs .active {
+  background: #2196f3;
+  color: white;
+}
+
+.party-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.party-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.party-logo {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #2196f3;
+  color: white;
+}
+
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 4rem;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.party-card-horizontal {
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 900px;
+  width: 90%;
+  gap: 1rem;
+}
+
+.party-logo-horizontal {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.party-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.party-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.party-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.follow-button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.party-description {
+  margin: 0.2rem 0 2rem 0;
+  color: #555;
+  align-self: flex-start; 
+}
+
+.party-actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.party-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.party-title a:hover {
+  text-decoration: underline;
+}
+
+.party-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.party-detail h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.party-detail p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.party-detail img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#party-posts h3 {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.mypage {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.mypage h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#mypage form,
+#partyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+#partyForm input[type="text"],
+#partyForm textarea {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#partyForm button {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#myParties .party-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+#myParties .party-card h3 {
+  margin: 0.5rem 0;
+}
+
+#myParties .party-card a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+#myParties .party-card a:hover {
+  text-decoration: underline;
+}
+
+#myParties .party-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.auth-page {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-page h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-page input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-page button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notification-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-page h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#notificationList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#notificationList li {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+}

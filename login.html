@@ -1,0 +1,35 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ログイン - 政党作成.com</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">政党作成.com</h1>
+  </header>
+  <div class="hamburger" id="hamburgerMenu">≡</div>
+  <nav class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="mypage.html">マイページ</a></li>
+      <li><a href="notification.html">通知</a></li>
+      <li><a href="register.html">アカウント作成</a></li>
+      <li><a href="login.html">ログイン</a></li>
+      <li><a href="#">ログアウト</a></li>
+    </ul>
+  </nav>
+  <main class="auth-page">
+    <h2>ログイン</h2>
+    <form id="loginForm">
+      <input type="email" placeholder="メールアドレス" required />
+      <input type="password" placeholder="パスワード" required />
+      <button type="submit">ログイン</button>
+    </form>
+  </main>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
