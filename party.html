@@ -31,6 +31,32 @@
     <img src="" alt="政党ロゴ" id="party-logo" class="party-logo-horizontal" />
     <p id="party-description">説明文を読み込み中...</p>
 
+    <!-- いいね・投票セクション -->
+    <section class="interaction-section">
+      <div class="like-section">
+        <button id="like-button" class="like-button">
+          <span class="like-icon">❤️</span>
+          <span id="like-count">0</span>
+        </button>
+      </div>
+      <div class="vote-section">
+        <button id="vote-button" class="vote-button">この政党に投票する</button>
+        <span id="vote-count">投票数: 0</span>
+      </div>
+    </section>
+
+    <!-- コメントセクション -->
+    <section class="comments-section">
+      <h3>コメント</h3>
+      <div class="comment-form">
+        <textarea id="comment-input" placeholder="コメントを入力..."></textarea>
+        <button id="submit-comment">投稿</button>
+      </div>
+      <div id="comments-list">
+        <!-- コメントはJavaScriptで動的に追加 -->
+      </div>
+    </section>
+
     <section id="party-posts">
       <h3>代表の投稿一覧</h3>
       <p>投稿はまだありません。</p>

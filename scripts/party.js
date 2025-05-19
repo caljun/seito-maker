@@ -63,3 +63,61 @@ document.addEventListener("DOMContentLoaded", function () {
   
     renderComments();
   });
+
+// いいね機能
+let isLiked = false;
+document.getElementById('like-button').addEventListener('click', async () => {
+    const likeCount = document.getElementById('like-count');
+    if (!isLiked) {
+        likeCount.textContent = parseInt(likeCount.textContent) + 1;
+        isLiked = true;
+        // 実際の実装ではAPIにいいねを送信
+    } else {
+        likeCount.textContent = parseInt(likeCount.textContent) - 1;
+        isLiked = false;
+        // 実際の実装ではAPIにいいね解除を送信
+    }
+});
+
+// 投票機能
+let hasVoted = false;
+document.getElementById('vote-button').addEventListener('click', async () => {
+    if (!hasVoted) {
+        const voteCount = document.getElementById('vote-count');
+        voteCount.textContent = `投票数: ${parseInt(voteCount.textContent.split(': ')[1]) + 1}`;
+        hasVoted = true;
+        document.getElementById('vote-button').disabled = true;
+        document.getElementById('vote-button').textContent = '投票済み';
+        // 実際の実装ではAPIに投票を送信
+    }
+});
+
+// コメント機能
+document.getElementById('submit-comment').addEventListener('click', async () => {
+    const commentInput = document.getElementById('comment-input');
+    const comment = commentInput.value.trim();
+    
+    if (comment) {
+        const commentsList = document.getElementById('comments-list');
+        const commentElement = document.createElement('div');
+        commentElement.className = 'comment';
+        
+        const now = new Date();
+        const commentHTML = `
+            <div class="comment-header">
+                <span class="comment-author">ユーザー名</span>
+                <span class="comment-date">${now.toLocaleString()}</span>
+            </div>
+            <div class="comment-content">${comment}</div>
+        `;
+        
+        commentElement.innerHTML = commentHTML;
+        commentsList.insertBefore(commentElement, commentsList.firstChild);
+        commentInput.value = '';
+        
+        // 実際の実装ではAPIにコメントを送信
+    }
+});
+
+// ページ読み込み時に政党データを取得
+document.addEventListener('DOMContentLoaded', loadPartyData);
